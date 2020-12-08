@@ -1,0 +1,142 @@
+	@font-face {
+		font-family: my; /* ѓарнитура шрифта */
+		src: url(fonts/3/Mono_Biletik-Regular_1_0.otf); /* Џуть к файлу со шрифтом */
+	}
+	
+	strong{
+		font-family: my;
+		text-align:center;
+		color:black; 
+	}
+	
+	
+	li {
+		list-style: none; /* Убираем исходные маркеры */
+		padding:6px;
+	 	background: url(picture/1/i5.png) no-repeat 0 3px ;/* Параметры фона */
+		background-size:34px;
+		padding-top: 10px; /* Смещаем текст вправо */ 
+		padding-left: 34px; /* Смещаем текст вправо */ 
+   }
+	 
+	 
+	table {
+		font-family: my;
+		text-align: center;
+		font-size: 14px;
+		border-radius: 10px;
+		border-spacing: 5px;
+		font-size: 14px;
+		width: 640px;
+		background: #252F48;
+		margin: auto;
+	}
+	
+	 
+	 th {
+		text-align: center;
+		vertical-align: center;
+		color: #EDB749;
+		border-bottom: 1px solid #37B5A5;
+		padding: 12px 17px;
+	}
+	
+	 td {
+		text-align: center;
+		vertical-align: center;
+		color: #CAD4D6;
+		border-bottom: 1px solid #37B5A5;
+		border-right:1px solid #37B5A5;
+		padding: 7px 17px;
+	}
+	
+	 		
+	td.red {
+		background: #B83933;
+		color:rgb(255, 255, 255); 
+	}
+	
+	td.green {
+		background: #269926;
+		color: white; 
+		}	
+				
+	.txt {
+		font-family: my;
+		background: #fcf8b3;
+		padding: 10px; 
+		border-radius: 10px; 
+	}
+	
+	.razdel{
+		background: #FFFAFA; 
+		padding: 10px; 
+		border-radius: 10px; 
+		float: left; 
+		position: left; 
+		}
+			
+	.txt2 {
+		font-family: my;
+		
+		background:white;
+		padding: 10px; 
+		border-radius: 10px; 
+	}
+	
+	a { 
+		text-decoration: none; 
+		color:rgb(0, 0, 0);
+	} 
+			
+	h1,h2 {
+		font-family: my;
+		text-align:center;
+		color:black; 
+		
+	}
+	
+	 
+          
+	html {
+		height: 90%; 
+		background:  url(picture/8.gif)    ; 
+		-moz-background-size: 20%; 
+		-webkit-background-size: 20%; 
+		-o-background-size: 20%; 
+		background-size: 20%; 
+	}
+		 
+		 
+		
+	.sign {
+		padding: 10px;
+		background: #2C2C2C; 
+	/*	border-radius: 10px; /* Уголки */
+		border-radius: 7mm; /* Уголки */
+		float: right; 
+		margin-right: 4mm; 
+		}
+			
+			
+	#footer {
+		font-family: my;
+		position: fixed; 
+		left: 0; bottom: 0; 
+		padding: 0,5%; 
+		background: #87CEEB; 
+		color: #fff; 
+		width: 100%; 
+			}
+#main{
+        width: 1119px;
+        height: 150px;
+        overflow: hidden;
+    }
+    #main>div{
+        width: 150px;
+        height: 120px;
+        display: inline-block;
+    }
+
+			

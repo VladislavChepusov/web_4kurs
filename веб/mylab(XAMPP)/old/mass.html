@@ -1,0 +1,148 @@
+﻿<!DOCTYPE HTML>
+<html> 
+	<head>
+		<link rel="SHORTCUT ICON" href="picture\1.png" type="image/x-icon">
+		<title>Python&#128293;</title>
+		<link rel="stylesheet" href="mass.css" type="text/css"> 
+		<script src="lab_4.js"></script>
+	</head>
+	
+	<body>
+	
+	 
+		<h1> 
+			<span class="txt"><a href = "one.html">Курс изучения Python </a> </span>
+		</h1>
+		
+		<h2>
+			<span class="txt2">
+				Массивы
+			</span>
+		</h2>
+		<br>
+		
+		<p align="left" class="razdel"> 	
+			<strong>Массив</strong>-это структура данных, в которой хранятся значения одного типа. <br>В Python это основное различие между массивами и списками.</p>
+		
+		
+		 
+		
+		
+		
+		<p class="sign">
+			<img src="picture\mass.gif" width="600">
+		</p>
+		
+		<div class="razdel">
+ 
+			Хотя <b>списки</b> Python могут содержать значения, соответствующие разным типам данных,<br> <b>массивы</b> в Python могут содержать только значения, соответствующие одному и тому же типу данных.<br>Не переживайте,до списков мы дойдем на следующем уроке,углубившись в них с головой	
+			<br>
+			Для использования массивов в языке Python, вам нужно импортировать стандартный array модуль.<br> Это потому , что массив не является основным типом данных , как строки, целое число и т.д. <br><br><br>Вот как вы можете импортировать array модуля в Python:
+			<div class="def"   >
+				from array import *
+			</div>
+			
+			<br><br>
+			
+			<strong>Одномерные массивы</strong> в Python представляют собой список элементов.<br> Значения указываются внутри квадратных скобок, где перечисляются через запятую.<br> Как правило, любой элемент можно вызвать по индексу и присвоить ему новое значение. 
+		
+			<br><b>Пустой список:<b> <br> 
+			<div class="def">
+				a = []
+			</div>
+			
+			
+ 	
+			
+			
+			
+			<br>Массив строк в Python 
+			<br>
+			<div class="def">
+				Prime = ['string1', 'string2', 'string3'] 
+				<br>Prime[1] = 'string2'; //true
+			</div>
+			<br>
+			Чтобы возвратить число элементов внутри списка, используют функцию<b> len()</b>:
+			<div class="def">
+				 len(Prime) == 4; // true
+			</div>
+			<br>
+			Когда нужно перечислить элементы массива, применяют цикл for. В «Питоне» этот цикл перебирает элементы,<br>а не индексы!
+			<div class="def">
+				 for elem in [1, 4, 67]
+			</div>
+			<br><br>
+			
+			<div onmousemove = "clock()">
+				<h3  > Правда с нами время останавливается? <br>    <span id = "tmr" >    </span>    </h3>
+			</div>
+			
+			<br><br>
+			Приведем пример простой работы с массивом в питоне
+			<div class="def">
+				Дано 20 целых чисел. Из массива удалить элементы, меньшие заданного b.<br><br>
+			<div>
+				from array import *
+			</div>
+			<div>
+				myarray = [] # заводим пустой список
+			</div>
+			<div>
+				n = 5 # считываем количество элемент в списке
+			</div>
+			<div>
+				for i in range(n):
+			</div>
+			<div>
+				&nbsp; &nbsp; new_element = int(input("Введите значение массива ="))&nbsp; # считываем очередной элемент
+			</div>
+			<div>
+				&nbsp; &nbsp; myarray.append(new_element) # добавляем его в список
+			</div>
+			<div>
+				x=int(input("Введите число для удаления="))
+			</div>
+			<div>
+				i=0
+			</div>
+			<div>
+				while len(myarray) i:
+			</div>
+			<div>
+				&nbsp; &nbsp; if  myarray[i]  x:
+			</div>
+			<div>
+				&nbsp; &nbsp; &nbsp; &nbsp; del myarray[i]
+			</div>
+			<div>
+				&nbsp; &nbsp; else:
+			</div>
+			<div>
+				&nbsp; &nbsp; &nbsp; &nbsp; i+=1
+			</div>
+			<div>
+				print("Новый массив=",myarray)
+			</div>
+			</div>
+			<br><br>
+			
+			
+			
+			
+			<div id="xz" align="center">	
+				<button onclick = "my_sc(1)">Пример по умолчанию</button>
+				<button onclick = "my_sc(2)"> Запустить самостоятельно</button>
+				<div id="result"></div> 	
+			</div>
+			<br><br><br>
+		
+		
+		
+		 
+		<div id="footer" align="center" onmousemove = "info()">
+			@Vladislav Chepusov 2020 v1.2.
+		</div>
+			
+	</body> 
+</html>

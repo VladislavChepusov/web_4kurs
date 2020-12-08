@@ -1,0 +1,131 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 transitional//EN" "http://www.w3.org/TR/HTML4.01/loose.dtd">
+
+<head>
+		<link rel="SHORTCUT ICON" href="custom\1.png" type="image/x-icon">
+		<title>Python&#128293;</title> 
+		<link rel="stylesheet" href="php_lab.css" type="text/css"> 
+		<script type="text/javascript">
+			var req=false;
+			if(window.XMLHttpRequest) { 
+				req=new XMLHttpRequest(); 
+				} 
+			else {
+				try {    req=new ActiveXObject('Msxml2.XMLHTTP'); 
+					} catch (e)
+				{      
+				req=new ActiveXObject('Microsoft.XMLHTTP');   
+				}  
+			}
+
+
+			if (! req) // если объект XMLHttpRequest не поддерживается
+				alert('Объект XMLHttpRequest не поддерживается данным браузером');
+
+
+			function Load($key) { 
+				if (! req)   
+					return; 
+					req.onreadystatechange = receive; 
+					req.open("post", 'zapros.php' , true); // открываем соединение
+					let key = $key;
+					let id =document.querySelector("[name=ID_lib]").value;
+					let id_del =document.querySelector("[name=ID_lib2]").value;
+					let name = document.querySelector("[name=name_lib]").value;
+					let version = document.querySelector("[name=version]").value;
+					let  language = document.querySelector("[name=language]").value;
+					let year = document.querySelector("[name=year]").value;
+					
+					data = "key=" + key +"&id=" + id +"&id_del=" + id_del + "&name=" + name + "&version=" + version  + "&language=" + language + "&year=" + year;
+				//	data = "id=" + id + "&name=" + name + "&version=" + version  + "&language=" + language + "&year=" + year;
+					req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+					req.send(data); // посылаем запрос серверу
+		
+					document.getElementById('1').value='';
+					document.getElementById('2').value='';
+					document.getElementById('3').value='';
+					document.getElementById('4').value='';
+					document.getElementById('5').value='';
+					document.getElementById('6').value='';
+					req.close();
+					
+				}
+				
+				 
+				
+
+
+			function receive() { // получение данных от сервера
+				if (req.readyState == 4){ // если запрос завершен
+					if (req.status == 200) { // если запрос завершен без ошибок
+						document.getElementById('content').innerHTML = req.responseText;
+						} 
+					else {
+						alert('Ошибка '+ req.status+': \n' + req.statustext);     }}
+				
+				}	
+	</script>   
+</head>  
+
+<body> 
+<br>   
+	<h1> 
+		<span class="txt" ><a href="old/one.html">Данные о библиотеках  </a>  </span>
+	</h1>
+
+	
+	
+	
+	<div align="center">
+	<input type="button"  value="Отобразить БД" onclick="Load(0)" style="  border-bottom: 1px solid #fff; border-top: 1px solid transparent; padding: 8px;  background: #e8edff; width: 300px; height:30 ;"  >
+	</div>
+	<div id='content' style="color:white"></div>
+	<br>
+	<br>
+			<TABLE align="center">
+				<TR>
+					<TH align=right>ID библиотеки:
+					<TD> <input type=text name=ID_lib id='1' >
+					 
+				<TR>
+				<TR>
+					<TH align=right>Название библиотеки:
+					<TD> <input type=text name=name_lib id='2' >
+				<TR>
+					<TH align=right>Версия:
+					<TD> <input type=text name=version id='3' >
+				<TR>
+					<TH align=right>Язык:
+					<TD> <input type=text name=language id='4' >
+				<TR>
+					<TH align=right>Год реализации:
+					<TD> <input type=text name=year id='5' >
+			<TR align=center>
+				<TD colspan=2 align=center class="inviz" >
+				
+				 <input type="button"    value="Сохранить" onclick="Load(1)" style="border:none ; width: 300px; height:30 ;"  >
+				 </TD>
+			</TR>
+			
+			</TABLE>
+			<TABLE align="center">
+				<TR>
+					<TH align=right>ID библиотеки:
+					<TD> <input type=text name=ID_lib2 id='6' >
+					 
+				<TR>
+				<TR align=center>
+				<TD colspan=2 align=center class="inviz" >
+				
+				 <input type="button"    value="Удалить" onclick="Load(2)" style="border:none ; width: 300px; height:30 ;"  >
+				 </TD>
+			</TR>
+			
+			
+			
+			
+<br><br>
+		<div id="footer" align="center" onmousemove = "info()">
+			@Vladislav Chepusov 2020 v1.5.
+		</div>
+</body> 
+</html>

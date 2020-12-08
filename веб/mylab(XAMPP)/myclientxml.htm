@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="SHORTCUT ICON" href="custom\1.png" type="image/x-icon">
+		<title>Python&#128293;</title> 
+		<link rel="stylesheet" href="php_lab.css" type="text/css"> 
+		<script>
+			function loadXMLDoc(filename) {
+				if (window.ActiveXObject) {
+					xhttp = new ActiveXObject("Msxml2.XMLHTTP");         }
+				else {           xhttp = new XMLHttpRequest();        }
+				xhttp.open("GET", filename, false);
+				try { xhttp.responseType = "msxml-document" } catch(err) {} // Helping IE11
+				xhttp.send("");
+				return xhttp.responseXML;   }
+
+			function displayResult() {
+ 
+			xml = loadXMLDoc("mydbxml.xml");
+			xsl = loadXMLDoc("mydbxsl.xsl");
+			// код для IE
+			if (window.ActiveXObject || xhttp.responseType == "msxml-document") {
+				ex = xml.transformNode(xsl);
+				document.getElementById("example").innerHTML = ex;        }
+			// код для Chrome, Firefox, Opera и др.
+			else if (document.implementation && document.implementation.createDocument) {
+				xsltProcessor = new XSLTProcessor();
+				xsltProcessor.importStylesheet(xsl);
+				resultDocument = xsltProcessor.transformToFragment(xml, document);
+				document.getElementById("example").appendChild(resultDocument);
+				}     }
+		</script>  
+	</head>
+	
+	<body onload="displayResult()"> 
+	
+		<br>   
+	<h1> 
+		<span class="txt" ><a href="old/one.html">Лучшие пользователи </a>  </span>
+	</h1>
+		
+   <div id="example" align="center" >  </div>
+   
+   <br><br>
+		<div id="footer" align="center" onmousemove = "info()">
+			@Vladislav Chepusov 2020 v1.5.
+		</div>
+	</body> 
+</html>

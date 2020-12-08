@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<script  type= "text/javascript">
+			var   tmrid;
+
+			function   bigben ()
+			{ 
+				var  datecur, hour, minute;     var time ="";
+				datecur = new Date();
+				hour = datecur.getHours();
+				minute= datecur.getMinutes();
+				sec = datecur.getSeconds();
+				
+				var now = new Date().toLocaleTimeString();
+				//time  = ((hour <10) ? "0" : "" ) + hour+"_";
+				//time  += ((minute <10) ? "0" : ":_" ) +  minute;
+				//time  += ((sec <10) ? "0" : ":_" ) +  sec;
+
+
+				tmr = document.getElementById ('tmr');
+				tmr.innerText = now; 
+				
+				if (minute % 2==0) {
+				tmr.style.color = "red";
+				}
+				else {
+				tmr.style.color = "blue";
+				}
+			}
+		</script>   
+	</head>
+	
+	<body>    
+		<h1  >  Time now :    <span id = "tmr" >    </span>    </h1>
+		<button onclick = "bigben()"> я покажу время</button>     
+	</body>    
+</html>

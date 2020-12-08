@@ -1,0 +1,174 @@
+	@font-face {
+		font-family: my; /* ѓарнитура шрифта */
+		src: url(fonts/3/Mono_Biletik-Regular_1_0.otf); /* Џуть к файлу со шрифтом */
+	}
+	
+	strong{
+		font-family: my;
+		text-align:center;
+		color:black; 
+	}
+	
+	
+	li {
+		list-style: none; /* Убираем исходные маркеры */
+		padding:6px;
+	 	background: url(picture/1/i5.png) no-repeat 0 3px ;/* Параметры фона */
+		background-size:34px;
+		padding-top: 10px; /* Смещаем текст вправо */ 
+		padding-left: 34px; /* Смещаем текст вправо */ 
+   }
+	 
+	 
+	table {
+		border-spacing: 0 10px;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: bold;
+		
+		}
+		
+	th {
+		padding: 10px 20px;
+		background: #F8E391;
+		color: black;
+		border-right: 0px solid; 
+		font-size: 1.2em;
+	}
+	
+	th:first-child {
+		text-align: left;
+		}
+	th:last-child {
+		border-right: none;
+	}
+
+	td {
+		vertical-align: middle;
+		background: white;
+		padding: 7px;
+		font-size: 14px;
+		text-align: center;
+		border-top: 3px solid #F8E391;
+		border-bottom: 3px solid #F8E391;
+		border-right: 3px solid #F8E391;
+		border-left: 2px solid #F8E391;
+   
+ 
+	border-bottom: 2px solid #F8E391;
+	}
+	td.inviz {
+		background: rgba(0, 0, 0, 0);
+		color:rgb(255, 255, 255); 
+		border-top: none;
+		border-bottom: none;
+		border-right: none;
+		border-left: none;
+	}
+	
+
+	 
+ 
+	 
+	 
+				
+	.txt {
+		font-family: my;
+		background: #fcf8b3;
+		padding: 10px; 
+		border-radius: 10px; 
+	}
+	
+	.razdel{
+		background: #FFFAFA; 
+		padding: 10px; 
+		border-radius: 10px; 
+		float: left; 
+		position: left; 
+		}
+			
+	.txt2 {
+		font-family: my;
+		
+		background:white;
+		padding: 10px; 
+		border-radius: 10px; 
+	}
+	
+	a { 
+		text-decoration: none; 
+		color:rgb(0, 0, 0);
+	} 
+			
+	h1,h2,h3{
+		font-family: my;
+		text-align:center;
+		color:black; 
+		
+	}
+	
+	 
+          
+	html {
+		height: 90%; 
+		background:  url(picture/8.gif)    ; 
+		-moz-background-size: 20%; 
+		-webkit-background-size: 20%; 
+		-o-background-size: 20%; 
+		background-size: 20%; 
+	}
+		 
+		 
+		input {
+			width: 50%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		 
+		
+		
+		
+		button{
+			 font-weight: 700;
+			color: white;
+			text-decoration: none;
+			padding: .8em 1em calc(.8em + 3px);
+			border-radius: 3px;
+			background: rgb(64,199,129);
+			box-shadow: 0 -3px rgb(53,167,110) inset;
+			transition: 0.2s;
+		}
+	.sign {
+		padding: 10px;
+		background: #2C2C2C; 
+	/*	border-radius: 10px; /* Уголки */
+		border-radius: 7mm; /* Уголки */
+		float: right; 
+		margin-right: 4mm; 
+		}
+		
+	.def{
+		background: #F0F0F0;
+		padding: 10px; 
+		width:auto;
+		text-align:left;
+		margin-top: 20px;
+		margin-bottom: auto;
+		margin-right: auto;
+		margin-left:auto; 
+		font-weight:bolder;
+		border-radius: 7mm;
+	}		
+			
+	#footer {
+		font-family: my;
+		position: fixed; 
+		left: 0; bottom: 0; 
+		padding: 0,5%; 
+		background: #87CEEB; 
+		color: #fff; 
+		width: 100%; 
+			}		

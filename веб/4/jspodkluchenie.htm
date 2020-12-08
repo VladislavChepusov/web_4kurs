@@ -1,0 +1,44 @@
+<html>
+	<head> 
+		<title> 
+			Script+function 
+		</title>
+		
+		<script  type= "text/javascript">		
+			prompt ('Это диалоговое окно prompt. У меня есть поле ввода и две кнопки.\n Из скрипта в теге script', '') 
+		</script>
+
+	<script  type= "text/javascript" src = "myfilejs.js"> 
+	
+	</script>
+
+	<script  type= "text/javascript">
+		function  mult (a,b)  {return a*b}
+		summa = function(a,b)
+		{
+		return a+b;
+		}  
+	</script>
+</head>
+
+	<body>   
+		<h1>  
+			Способы подключения скрипта 
+		</h1>
+
+		<button onclick = "alert ('Это диалоговое окно alert из скрипта после атрибута-события. \nУ меня одна кнопка OK.')">
+			скрипт после атрибута-события
+		</button>  
+		<br><br>
+
+		<button onclick = "jsfunction()"> вызов функции из файла</button>
+
+		<h1>  
+			Способы написания функции 
+		</h1>
+
+		<button onclick = "alert('Результат умножения: ' + String (mult (5,10))) "> вызов функции с параметрами</button> <br><br>
+
+		<button onclick = "alert('Результат сложения:  '+ String(summa(2,4)))"> анонимная функция, вызываемая через переменную</button>
+	</body> 
+</html>
